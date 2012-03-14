@@ -10,10 +10,13 @@ Bundle 'wincent/Command-T.git'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'shawncplus/skittles_berry'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
 
 set number
+set ruler
 
 "cut down on rage
 :command WQ wq
@@ -52,6 +55,7 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
 " Vim-powerline
+set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
 " colors
