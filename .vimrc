@@ -9,8 +9,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'wincent/Command-T.git'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'shawncplus/skittles_berry'
 
 filetype plugin indent on
+
+set number
 
 "cut down on rage
 :command WQ wq
@@ -52,7 +55,5 @@ let g:gist_open_browser_after_post = 1
 let g:Powerline_symbols = 'fancy'
 
 " colors
-let g:solarized_termcolors=256
-set t_Co=256
-set background=dark
-colorscheme solarized
+syntax enable
+colorscheme skittles_berry
