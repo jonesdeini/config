@@ -12,22 +12,24 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'shawncplus/skittles_berry'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
+Bundle 'ervandew/supertab'
+Bundle 'mattn/webapi-vim'
 
 filetype plugin indent on
 
 set number
 set ruler
 
+"tab stuff
+set tabstop=2
+set expandtab
+set shiftwidth=2
+
 "cut down on rage
 :command WQ wq
 :command Wq wq
 :command W w
 :command Q q
-
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
@@ -38,9 +40,6 @@ let g:CommandTMaxHeight=20
 " make command-t open in new tab
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
-
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
@@ -59,5 +58,19 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
 " colors
+set t_Co=256
 syntax enable
 colorscheme skittles_berry
+
+" dir for .swp files
+set backupdir=~/.vim/swp
+set directory=~/.vim/swp
+
+" pasting
+map <Leader>p :set paste!<CR>
+
+map <Leader>nn :set number!<CR>
+
+" alignment 
+map <Leader>= ggVG=<CR>
+
