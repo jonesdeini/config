@@ -12,8 +12,10 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'shawncplus/skittles_berry'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
+"look into supertab-continued
 Bundle 'ervandew/supertab'
 Bundle 'mattn/webapi-vim'
+Bundle 'tpope/vim-rails'
 
 filetype plugin indent on
 
