@@ -59,10 +59,7 @@ let g:gist_open_browser_after_post = 1
 set encoding=utf-8
 set laststatus=2
 set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline
-"set gfn=Droid\ Sans\ Mono\ Slashed\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
-" ZOMG CALL 911 MEOW!!!!
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " colors
 set t_Co=256
