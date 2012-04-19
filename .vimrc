@@ -4,19 +4,20 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 "github repos
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'wincent/Command-T.git'
-Bundle 'mattn/gist-vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'shawncplus/skittles_berry'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'ervandew/supertab'
-Bundle 'mattn/webapi-vim'
-Bundle 'tpope/vim-rails'
 Bundle 'altercation/vim-colors-solarized'
-"vim-scripts repos
+Bundle 'ervandew/supertab'
+Bundle 'gmarik/vundle'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'shawncplus/skittles_berry'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'wincent/Command-T.git'
+"vim-script repos
 Bundle 'twilight256.vim'
 
 filetype plugin indent on
@@ -58,7 +59,9 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
 " Vim-powerline
+set encoding=utf-8
 set laststatus=2
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 
 " colors
