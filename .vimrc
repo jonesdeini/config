@@ -12,10 +12,12 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'shawncplus/skittles_berry'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
-"look into supertab-continued
 Bundle 'ervandew/supertab'
 Bundle 'mattn/webapi-vim'
 Bundle 'tpope/vim-rails'
+Bundle 'altercation/vim-colors-solarized'
+"vim-scripts repos
+Bundle 'twilight256.vim'
 
 filetype plugin indent on
 
@@ -76,3 +78,8 @@ map <Leader>nn :set number!<CR>
 " alignment 
 map <Leader>= ggVG=<CR>
 
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
