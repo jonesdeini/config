@@ -14,16 +14,20 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'shawncplus/skittles_berry'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-vividchalk'
 Bundle 'wincent/Command-T.git'
 "vim-script repos
 Bundle 'twilight256.vim'
 
 filetype plugin indent on
 
+"formatting stuff
 set number
 set ruler
+set list listchars=tab:\¶¤\,trail:¡,eol:¬
 
 "tab stuff
 set tabstop=2
@@ -86,3 +90,7 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
+
+" my laziness
+map <Leader>f gT
+map <Leader>j gt
