@@ -20,13 +20,16 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'wincent/Command-T.git'
 "vim-script repos
+Bundle 'ack.vim'
 Bundle 'twilight256.vim'
 
 filetype plugin indent on
 
-"formatting stuff
+" formatting stuff
 set number
 set ruler
+
+" whitespace raaaaaaaggggeeeee
 set list listchars=tab:\¶¤\,trail:¡,eol:¬
 
 "tab stuff
@@ -94,3 +97,20 @@ endif
 " my laziness
 map <Leader>f gT
 map <Leader>j gt
+
+" stop being a noob 
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
+" ; to  :
+noremap ; :
+
+" highlight search
+set hlsearch
+set incsearch
