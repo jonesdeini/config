@@ -52,6 +52,7 @@ let g:CommandTMaxHeight=20
 " make command-t open in new tab
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+let g:CommandTAlwaysShowDotFiles = 1
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
@@ -95,8 +96,8 @@ if has("autocmd")
 endif
 
 " my laziness
-map <Leader>f gT
-map <Leader>j gt
+map ff gT
+map gg gt
 
 " stop being a noob 
 noremap  <Up> ""
@@ -109,7 +110,8 @@ noremap  <Right> ""
 noremap! <Right> <Esc>
 
 " ; to  :
-noremap ; :
+" just dont have the accuracy for this right meow
+"noremap ; :
 
 " highlight search
 set hlsearch
