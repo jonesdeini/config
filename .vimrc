@@ -23,6 +23,7 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'wincent/Command-T.git'
 "vim-script repos
 Bundle 'ack.vim'
+Bundle 'buftabs'
 Bundle 'twilight256.vim'
 
 filetype plugin indent on
@@ -52,8 +53,8 @@ map <Leader>n :NERDTreeToggle<CR>
 " Command-T configuration
 let g:CommandTMaxHeight=20
 " make command-t open in new tab
-let g:CommandTAcceptSelectionMap = '<C-t>'
-let g:CommandTAcceptSelectionTabMap = '<CR>'
+"let g:CommandTAcceptSelectionMap = '<C-t>'
+"let g:CommandTAcceptSelectionTabMap = '<CR>'
 let g:CommandTAlwaysShowDotFiles = 1
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
@@ -97,9 +98,9 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-" switch b/t tabs
-map <C-p> gT
-map <C-n> gt
+" switch b/t buffers
+map <C-p> :bp <CR>
+map <C-n> :bn <CR>
 
 " stop being a noob 
 noremap  <Up> ""
