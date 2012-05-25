@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
+Bundle 'jonesdeini/vim-comment-blocks'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
