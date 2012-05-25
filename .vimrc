@@ -87,7 +87,7 @@ map <Leader>p :set paste!<CR>
 
 map <Leader>nn :set number!<CR>
 
-" alignment 
+" alignment
 map <Leader>= ggVG=<CR>
 
 " Remember last location in file
@@ -96,9 +96,9 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-" my laziness
-map ff gT
-map gg gt
+" switch b/t tabs
+map <C-p> gT
+map <C-n> gt
 
 " stop being a noob 
 noremap  <Up> ""
