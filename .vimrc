@@ -117,3 +117,6 @@ noremap! <Right> <Esc>
 " highlight search
 set hlsearch
 set incsearch
+
+" comment-blocks
+imap <silent> ### <C-R>=CommentBlock(input("Enter comment: "))<CR>
