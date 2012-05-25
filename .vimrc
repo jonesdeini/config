@@ -121,3 +121,6 @@ set incsearch
 
 " comment-blocks
 imap <silent> ### <C-R>=CommentBlock(input("Enter comment: "))<CR>
+
+" show commands for tab completion
+set wildmenu
