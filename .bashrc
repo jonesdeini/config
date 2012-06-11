@@ -42,4 +42,5 @@ ex () {
   fi
 }
 
+# chmod +x bin/git-edit
 export PATH="$PATH:~/config/bin"
