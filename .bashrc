@@ -1,15 +1,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export EDITOR="vim"
-
 #alias'
 case $(uname -s) in
   Darwin)
     alias ls='ls -lahFG'
+    alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+    export EDITOR="/Applications/MacVim.App/Contents/MacOS/Vim"
   ;;
   Linux)
     alias ls='ls --color=auto -lahF'
+    export EDITOR="vim"
   ;;
 esac
 alias ec2='ssh -i ~/r0bj0n3s99.pem root@184.73.157.166'
