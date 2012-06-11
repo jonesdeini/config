@@ -1,6 +1,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export EDITOR="vim"
+
 #alias'
 case $(uname -s) in
   Darwin)
@@ -39,3 +41,5 @@ ex () {
     echo "'$1' is not a valid file"
   fi
 }
+
+export PATH="$PATH:~/config/bin"
