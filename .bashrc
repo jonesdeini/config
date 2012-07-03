@@ -15,6 +15,7 @@ case $(uname -s) in
 esac
 alias ec2='ssh -i ~/r0bj0n3s99.pem root@184.73.157.166'
 alias resq='QUEUE=* rake resque:work'
+alias gst="git status"
 
 PS1='[\W]\$ '
 
@@ -50,3 +51,6 @@ export PATH="$PATH:~/config/bin"
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+
+# tab completion for git
+source /usr/local/git/contrib/completion/git-completion.bash
