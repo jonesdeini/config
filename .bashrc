@@ -17,7 +17,15 @@ alias ec2='ssh -i ~/r0bj0n3s99.pem root@184.73.157.166'
 alias resq='QUEUE=* rake resque:work'
 alias gst="git status"
 
-PS1='[\W]\$ '
+#PS1='[\W]\$ '
+
+# write a function to compute the current git branch
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+# set the PS1 variable
+PS1="\w\[\e[0;36;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
 
 ##################
 # stolen from: http://signalboxes.net/configs/bashrc-for-linux-and-mac/
