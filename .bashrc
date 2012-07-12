@@ -56,9 +56,22 @@ ex () {
 export PATH="$PATH:~/config/bin"
 
 # autojump
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+case $(uname -s) in
+  Darwin)
+    if [ -f `brew --prefix`/etc/autojump ]; then
+      . `brew --prefix`/etc/autojump
+    fi
+  ;;
+  Linux)
+  ;;
+esac
 
 # tab completion for git
-source /usr/local/git/contrib/completion/git-completion.bash
+case $(uname -s) in
+  Darwin)
+    source /usr/local/git/contrib/completion/git-completion.bash
+  ;;
+  Linux)
+    source /usr/share/git/completion/git-completion.bash
+  ;;
+esac
