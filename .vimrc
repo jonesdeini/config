@@ -14,6 +14,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'shawncplus/skittles_berry'
+Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-fugitive'
@@ -24,6 +25,7 @@ Bundle 'wincent/Command-T.git'
 "vim-script repos
 Bundle 'ack.vim'
 Bundle 'buftabs'
+Bundle 'dbext.vim'
 Bundle 'twilight256.vim'
 
 filetype plugin indent on
@@ -58,7 +60,7 @@ let g:CommandTMaxHeight=20
 let g:CommandTAlwaysShowDotFiles = 1
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+" au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 
 " gist-vim defaults
 if has("mac")

@@ -63,6 +63,8 @@ case $(uname -s) in
     fi
   ;;
   Linux)
+    # hate this
+    source /etc/profile
   ;;
 esac
 
