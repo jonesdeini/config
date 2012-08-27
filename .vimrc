@@ -24,9 +24,15 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'wincent/Command-T.git'
 "vim-script repos
 Bundle 'ack.vim'
-Bundle 'buftabs'
 Bundle 'dbext.vim'
 Bundle 'twilight256.vim'
+
+" the search for a decent buffer explorer
+" Bundle 'buftabs'
+Bundle 'minibufexpl.vim'
+" this is next
+" Bundle 'SelectBuf'
+" Bundle 'Tagma-Buffer-Manager'
 
 filetype plugin indent on
 
