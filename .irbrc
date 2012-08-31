@@ -1,6 +1,3 @@
-# in ~/.irbrc 
-# load '~/config/.irbrc'
-
 %w{rubygems wirble}.each do |lib| 
   begin 
     require lib 
