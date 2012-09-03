@@ -28,10 +28,23 @@ Bundle 'dbext.vim'
 Bundle 'twilight256.vim'
 
 " the search for a decent buffer explorer
-" Bundle 'buftabs'
-Bundle 'minibufexpl.vim'
-" this is next
+
+" not bad, just goes away sometimes
+Bundle 'buftabs'
+
+" loses formatting on buffer destroy
+" doesnt play well with dbext
+" qutting doesnt do anything
+" breaks command-t sometimes
+" Bundle 'minibufexpl.vim'
+
+" doesnt have a way to always show buffers
+" command t already will show current buffers
 " Bundle 'SelectBuf'
+" Bundle 'genutils'
+
+" runs in a window, so qa is needed
+" another thing I cant remember
 " Bundle 'Tagma-Buffer-Manager'
 
 filetype plugin indent on
@@ -49,10 +62,12 @@ set expandtab
 set shiftwidth=2
 
 "cut down on rage
+:command Q q
+:command QA qa
+:command Qa qa
+:command W w
 :command WQ wq
 :command Wq wq
-:command W w
-:command Q q
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
