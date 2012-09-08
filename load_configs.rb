@@ -1,31 +1,21 @@
 RCS = {
-        ".pgpass" => "*:*:*:*:\"\"",
-        ".irbrc" => "load '~/config/.irbrc'",
-        ".vimrc" => "source ~/config/.vimrc",
-        ".bashrc" => "source ~/config/.bashrc"
+        "~/.pgpass" => "*:*:*:*:\"\"",
+        "~/.irbrc" => "load '~/config/.irbrc'",
+        "~/.vimrc" => "source ~/config/.vimrc",
+        "~/.bashrc" => "source ~/config/.bashrc"
 }
 
 def do_things
   RCS.each do |k,v|
-    write_config_to_file k,v if find_or_create_file k
+    write_config_to_file k,v unless File.exists?(File.expand_path(k))
   end
-end
-
-def find_or_create_file(file)
-  f = File.open file
-  unless f
-    # create the file
-    #File.new file
-    return true
-  end
-  return false
 end
 
 def write_config_to_file(file, config)
   # create
-  f = File.open file
+  f = File.new(File.expand_path(file), "w+")
   f << config
-  f.save
+  f.chmod(0600) if file == "~/.pgpass"
 end
 
 # also need to chmod 600 ~/.pgpass
