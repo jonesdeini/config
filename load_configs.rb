@@ -18,6 +18,4 @@ def write_config_to_file(file, config)
   f.chmod(0600) if file == "~/.pgpass"
 end
 
-# also need to chmod 600 ~/.pgpass
-
 do_things
