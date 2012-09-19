@@ -80,8 +80,8 @@ let g:CommandTMaxHeight=20
 "let g:CommandTAcceptSelectionTabMap = '<CR>'
 let g:CommandTAlwaysShowDotFiles = 1
 
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-" au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+" Guardfile is Ruby
+au BufRead,BufNewFile {Guardfile} set ft=ruby
 
 " gist-vim defaults
 if has("mac")
