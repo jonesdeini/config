@@ -77,3 +77,6 @@ case $(uname -s) in
     source /usr/share/git/completion/git-completion.bash
   ;;
 esac
+
+# phantomjs lives here
+PATH=~/bin:$PATH

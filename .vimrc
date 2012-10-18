@@ -75,9 +75,6 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
-" make command-t open in new tab
-"let g:CommandTAcceptSelectionMap = '<C-t>'
-"let g:CommandTAcceptSelectionTabMap = '<CR>'
 let g:CommandTAlwaysShowDotFiles = 1
 
 " Guardfile is Ruby
