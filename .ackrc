@@ -1,0 +1,3 @@
+--ignore-dir=coverage
+--type-add=ruby=.haml
+--type-add=css=.less,.sass,.scss
