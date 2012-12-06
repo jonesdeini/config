@@ -2,7 +2,6 @@ RCS = {
         "~/.pgpass" => "*:*:*:*:\"\"",
         "~/.irbrc"  => "load '~/config/.irbrc'",
         "~/.vimrc"  => "source ~/config/.vimrc",
-        "~/.ackrc"  => "source ~/config/.ackrc",
         "~/.bashrc" => "source ~/config/.bashrc"
 }
 
@@ -12,6 +11,11 @@ def do_things
     write_config_to_file k,v unless File.exists?(File.expand_path(k))
   end
   Dir.mkdir(File.join(Dir.home,"bin")) unless Dir.exists?(File.join(Dir.home, "bin"))
+  symlink_ackrc
+end
+
+def symlink_ackrc
+  File.symlink(File.expand_path(".ackrc"), (File.expand_path("~/.ackrc")))
 end
 
 def write_config_to_file(file, config)
