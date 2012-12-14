@@ -9,6 +9,7 @@ Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
 " TODO fix this terrible thing
 "Bundle 'jonesdeini/vim-comment-blocks'
+Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mattn/gist-vim'
