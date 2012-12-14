@@ -3,8 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"github repos
-Bundle 'altercation/vim-colors-solarized'
+" github repos
 Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
 " TODO fix this terrible thing
@@ -23,12 +22,10 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-vividchalk'
 Bundle 'wincent/Command-T.git'
-"vim-script repos
+" vim-script repos
 Bundle 'ack.vim'
 Bundle 'dbext.vim'
-Bundle 'twilight256.vim'
 
 " the search for a decent buffer explorer
 
