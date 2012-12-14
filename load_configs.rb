@@ -14,11 +14,11 @@ end
 
 def main
   ConfigFile = Struct.new(:dest_path, :filename, :source_path, :strategy)
-  config_files << ConfigFile.new("~/.ackrc", ".ackrc", "~/config/.ackrc", { "symlink" => nil })
-  config_files << ConfigFile.new("~/.bashrc", ".bashrc", "~/config/.bashrc", { "symlink" => nil })
-  config_files << ConfigFile.new("~/.irbrc", ".irbrc", "~/config/.irbrc", { "symlink" => nil })
-  config_files << ConfigFile.new("~/.pgpass", ".pgpass", nil, { "write" => "*:*:*:*:\"\"" })
-  config_files << ConfigFile.new("~/.vimrc", ".vimrc", "~/config/.vimrc", { "symlink" => nil })
+  config_files = [ConfigFile.new("~/.ackrc", ".ackrc", "~/config/.ackrc", { "symlink" => nil }),
+                  ConfigFile.new("~/.bashrc", ".bashrc", "~/config/.bashrc", { "symlink" => nil }),
+                  ConfigFile.new("~/.irbrc", ".irbrc", "~/config/.irbrc", { "symlink" => nil }),
+                  ConfigFile.new("~/.pgpass", ".pgpass", nil, { "write" => "*:*:*:*:\"\"" }),
+                  ConfigFile.new("~/.vimrc", ".vimrc", "~/config/.vimrc", { "symlink" => nil })]
 
   config_files.each do |file|
     # TODO this is so ugly and brittle
