@@ -24,7 +24,7 @@ def main
     # TODO this is so ugly and brittle
     if file.strategy.keys.first == "symlink"
       symlink file.dest_path file.source_path
-    elsif file.strategy == "write"
+    elsif file.strategy.keys.first == "write"
       write_config_to_file file.dest_path, file.strategy.values.first
     end
     puts "#{strategy.keys.first} #{filename}"
