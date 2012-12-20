@@ -71,12 +71,22 @@ esac
 # tab completion for git
 case $(uname -s) in
   Darwin)
+    # not checking if it exists bc we want it to complain if it doesn't exist
     source /usr/local/git/contrib/completion/git-completion.bash
   ;;
   Linux)
-    source /usr/share/git/completion/git-completion.bash
+    # ubuntu only???
+    if [ -f /etc/bash_completion ]; then
+      . /etc/bash_completion
+    fi
+    # arch only???
+    if [ -f /usr/share/git/completion/git-completion.bash ]; then
+        source /usr/share/git/completion/git-completion.bash
+    fi
   ;;
 esac
 
 # phantomjs lives here
 PATH=~/bin:$PATH
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
