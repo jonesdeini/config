@@ -78,7 +78,10 @@ case $(uname -s) in
   ;;
   Linux)
     # hate this
-    source /etc/profile
+    # source /etc/profile
+
+    # ubuntu only???
+    . /usr/share/autojump/autojump.bash
   ;;
 esac
 
@@ -86,7 +89,7 @@ esac
 case $(uname -s) in
   Darwin)
     # not checking if it exists bc we want it to complain if it doesn't exist
-    source /usr/local/git/contrib/completion/git-completion.bash
+    . /usr/local/git/contrib/completion/git-completion.bash
   ;;
   Linux)
     # ubuntu only???
@@ -95,7 +98,7 @@ case $(uname -s) in
     fi
     # arch only???
     if [ -f /usr/share/git/completion/git-completion.bash ]; then
-        source /usr/share/git/completion/git-completion.bash
+      . /usr/share/git/completion/git-completion.bash
     fi
   ;;
 esac
