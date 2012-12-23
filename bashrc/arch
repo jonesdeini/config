@@ -1,0 +1,8 @@
+# hate this
+# source /etc/profile
+
+# tab completion for git
+# arch only???
+if [ -f /usr/share/git/completion/git-completion.bash ]; then
+  . /usr/share/git/completion/git-completion.bash
+fi

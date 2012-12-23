@@ -16,17 +16,6 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 #alias'
-case $(uname -s) in
-  Darwin)
-    alias ls='ls -lahFG'
-    alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-    export EDITOR="/Applications/MacVim.App/Contents/MacOS/Vim"
-  ;;
-  Linux)
-    alias ls='ls --color=auto -lahF'
-    export EDITOR="vim"
-  ;;
-esac
 alias ec2='ssh -i ~/r0bj0n3s99.pem root@184.73.157.166'
 alias resq='QUEUE=* rake resque:work'
 alias gst="git status"
@@ -41,10 +30,7 @@ parse_git_branch() {
 # set the PS1 variable
 PS1="\w\[\e[0;36;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
 
-##################
-# stolen from: http://signalboxes.net/configs/bashrc-for-linux-and-mac/
 # extract files eg: ex tarball.tar#
-##################
 ex () {
   if [ -f $1 ] ; then
     case $1 in
@@ -69,41 +55,21 @@ ex () {
 # chmod +x bin/git-edit
 export PATH="$PATH:~/config/bin"
 
-# autojump
-case $(uname -s) in
-  Darwin)
-    if [ -f `brew --prefix`/etc/autojump ]; then
-      . `brew --prefix`/etc/autojump
-    fi
-  ;;
-  Linux)
-    # hate this
-    # source /etc/profile
-
-    # ubuntu only???
-    . /usr/share/autojump/autojump.bash
-  ;;
-esac
-
-# tab completion for git
-case $(uname -s) in
-  Darwin)
-    # not checking if it exists bc we want it to complain if it doesn't exist
-    . /usr/local/git/contrib/completion/git-completion.bash
-  ;;
-  Linux)
-    # ubuntu only???
-    if [ -f /etc/bash_completion ]; then
-      . /etc/bash_completion
-    fi
-    # arch only???
-    if [ -f /usr/share/git/completion/git-completion.bash ]; then
-      . /usr/share/git/completion/git-completion.bash
-    fi
-  ;;
-esac
-
 # phantomjs lives here
 PATH=~/bin:$PATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
+# os specific configs
+case $(uname -s) in
+  Darwin)
+    . ~/config/bashrc/osx
+  ;;
+  Linux)
+    . ~/config/bashrc/linux
+  ;;
+esac

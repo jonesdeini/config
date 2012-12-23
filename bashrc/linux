@@ -1,0 +1,7 @@
+alias ls='ls --color=auto -lahF'
+export EDITOR="vim"
+
+# TODO method to determine distro from uname
+# for now source all files
+. ~/config/bashrc/arch
+. ~/config/bashrc/ubuntu
