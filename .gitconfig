@@ -1,0 +1,9 @@
+[user]
+	name = jonesdeini
+	email = jonesdeini@gmail.com
+[github]
+	user = jonesdeini
+[color]
+  ui = auto
+[alias]
+  co = checkout
