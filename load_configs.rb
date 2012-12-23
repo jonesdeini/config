@@ -19,6 +19,7 @@ end
 def main
   config_files = [ConfigFile.new("~/.ackrc", ".ackrc", "~/config/.ackrc", { "symlink" => nil }),
                   ConfigFile.new("~/.bashrc", ".bashrc", "~/config/.bashrc", { "symlink" => nil }),
+                  ConfigFile.new("~/.gitconfig", ".gitconfig", "~/config/.gitconfig", { "symlink" => nil }),
                   ConfigFile.new("~/.irbrc", ".irbrc", "~/config/.irbrc", { "symlink" => nil }),
                   ConfigFile.new("~/.pgpass", ".pgpass", nil, { "write" => "*:*:*:*:\"\"" }),
                   ConfigFile.new("~/.vimrc", ".vimrc", "~/config/.vimrc", { "symlink" => nil })]
