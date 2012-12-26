@@ -1,5 +1,5 @@
-# hate this
-# source /etc/profile
+# autojump
+. /etc/profile.d/autojump.bash
 
 # tab completion for git
 # arch only???

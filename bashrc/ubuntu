@@ -1,5 +1,4 @@
 # autojump
-# ubuntu only???
 . /usr/share/autojump/autojump.bash
 
 # tab completion for git
