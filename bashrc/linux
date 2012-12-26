@@ -1,7 +1,7 @@
 alias ls='ls --color=auto -lahF'
 export EDITOR="vim"
 
-case $(cat /etc/issue) in
+case $(cat /etc/issue | awk -F' ' '{print $1}') in
   Arch)
     . ~/config/bashrc/arch
   ;;
