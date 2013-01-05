@@ -1,3 +1,5 @@
+" I USE SINGLE QUOTES ONLY WHEN I HAVE TO
+" AAAAAAAAARRRRRRRRRRGGGGGGGGGGGGGGGG!!!!!!!!!!
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -8,6 +10,7 @@ Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
 " TODO fix this terrible thing
 "Bundle 'jonesdeini/vim-comment-blocks'
+Bundle 'jnwhiteh/vim-golang'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
