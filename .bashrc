@@ -16,15 +16,13 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 #alias'
-alias ec2='ssh -i ~/r0bj0n3s99.pem root@184.73.157.166'
-alias resq='QUEUE=* rake resque:work'
+alias ec2="ssh -i ~/r0bj0n3s99.pem root@184.73.157.166"
+alias resq="QUEUE=* rake resque:work"
 alias gst="git status"
-
-#PS1='[\W]\$ '
 
 # write a function to compute the current git branch
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/(\1)/"
 }
 
 # set the PS1 variable
@@ -57,6 +55,10 @@ export PATH="$PATH:~/config/bin"
 
 # phantomjs lives here
 PATH=~/bin:$PATH
+
+# go
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

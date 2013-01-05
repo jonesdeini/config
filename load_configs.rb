@@ -17,8 +17,10 @@ def write_config_to_file(dest_path, file_contents)
 end
 
 def main
+  # NOTE bash_profile is unlikely to change
   config_files = [ConfigFile.new("~/.ackrc", ".ackrc", "~/config/.ackrc", { "symlink" => nil }),
                   ConfigFile.new("~/.bashrc", ".bashrc", "~/config/.bashrc", { "symlink" => nil }),
+                  ConfigFile.new("~/.bash_profile", ".bash_profile", "~/config/.bash_profile", { "symlink" => nil }),
                   ConfigFile.new("~/.gitconfig", ".gitconfig", "~/config/.gitconfig", { "symlink" => nil }),
                   ConfigFile.new("~/.irbrc", ".irbrc", "~/config/.irbrc", { "symlink" => nil }),
                   ConfigFile.new("~/.pgpass", ".pgpass", nil, { "write" => "*:*:*:*:\"\"" }),
