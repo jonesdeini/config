@@ -8,9 +8,9 @@ call vundle#rc()
 " github repos
 Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
+Bundle 'jonesdeini/vim-golang'
 " TODO fix this terrible thing
 "Bundle 'jonesdeini/vim-comment-blocks'
-Bundle 'jnwhiteh/vim-golang'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
