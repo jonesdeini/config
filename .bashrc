@@ -19,6 +19,7 @@ shopt -s checkwinsize
 alias ec2="ssh -i ~/r0bj0n3s99.pem root@184.73.157.166"
 alias resq="QUEUE=* rake resque:work"
 alias gst="git status"
+alias ga="git add -p"
 
 # write a function to compute the current git branch
 parse_git_branch() {
