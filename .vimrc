@@ -6,7 +6,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " github repos
-Bundle 'airblade/vim-gitgutter'
 Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
 Bundle 'jonesdeini/vim-golang'
