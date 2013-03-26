@@ -7,3 +7,5 @@
   ui = auto
 [alias]
   co = checkout
+[push]
+  default = simple
