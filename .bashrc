@@ -61,6 +61,9 @@ PATH=~/bin:$PATH
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 
+#heroku
+export PATH=$PATH:$HOME/heroku-client/bin
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
