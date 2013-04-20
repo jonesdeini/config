@@ -64,6 +64,10 @@ export PATH=$PATH:$GOROOT/bin
 #heroku
 export PATH=$PATH:$HOME/heroku-client/bin
 
+#python
+export WORKON_HOME=~/.virtualenvs
+. /usr/bin/virtualenvwrapper.sh # arch specific?
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
