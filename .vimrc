@@ -13,6 +13,7 @@ Bundle 'jonesdeini/vim-golang'
 "Bundle 'jonesdeini/vim-comment-blocks'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
@@ -26,7 +27,6 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
-Bundle 'wincent/Command-T.git'
 " vim-script repos
 Bundle 'ack.vim'
 Bundle 'dbext.vim'
@@ -77,9 +77,11 @@ set shiftwidth=2
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
-" Command-T configuration
-let g:CommandTMaxHeight=20
-let g:CommandTAlwaysShowDotFiles = 1
+"Ctrlp
+map <leader>t :CtrlPMixed<cr>
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_map = ''
 
 " Guardfile is Ruby
 au BufRead,BufNewFile {Guardfile} set ft=ruby
