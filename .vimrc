@@ -106,9 +106,7 @@ set t_Co=256
 syntax enable
 colorscheme skittles_berry
 
-" dir for .swp files
-set backupdir=~/.vim/swp
-set directory=~/.vim/swp
+set noswapfile
 
 " pasting
 map <Leader>p :set paste!<CR>
