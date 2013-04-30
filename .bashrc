@@ -27,7 +27,7 @@ parse_git_branch() {
 }
 
 # set the PS1 variable
-PS1="\w\[\e[0;36;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
+PS1="\u@\h \w\[\e[0;36;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
 
 # extract files eg: ex tarball.tar#
 ex () {
