@@ -78,7 +78,7 @@ let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
 "Ctrlp
-map <leader>t :CtrlPMixed<cr>
+map <leader>t :CtrlPCurWD<cr>
 let g:ctrlp_match_window_reversed=0
 let g:ctrlp_match_window_bottom=1
 let g:ctrlp_map = ''
