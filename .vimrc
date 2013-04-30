@@ -126,7 +126,7 @@ endif
 map <C-p> :bp <CR>
 map <C-n> :bn <CR>
 
-" stop being a noob 
+" disable arrow keys
 noremap  <Up> ""
 noremap! <Up> <Esc>
 noremap  <Down> ""
