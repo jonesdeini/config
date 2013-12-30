@@ -35,7 +35,8 @@ def main
     end
     puts "#{file.strategy.keys.first} #{file.filename}"
   end
-  Dir.mkdir(File.join(Dir.home,"bin")) unless Dir.exists?(File.join(Dir.home, "bin"))
+  local_bin = File.expand_path("~/bin")
+  Dir.mkdir(local_bin) unless Dir.exists(local_bin)
 end
 
 main
