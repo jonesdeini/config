@@ -17,7 +17,7 @@ shopt -s checkwinsize
 
 #alias'
 alias ec2="ssh -i ~/r0bj0n3s99.pem root@184.73.157.166"
-alias resq="QUEUE=* rake resque:work"
+alias resq="rake resque:work VERBOSE=1 QUEUE=* --trace"
 alias gst="git status"
 alias ga="git add -p"
 
