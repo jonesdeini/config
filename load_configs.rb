@@ -24,6 +24,7 @@ def main
                   ConfigFile.new("~/.gitconfig", ".gitconfig", "~/config/jonesdeini/.gitconfig", { "symlink" => nil }),
                   ConfigFile.new("~/.irbrc", ".irbrc", "~/config/jonesdeini/.irbrc", { "symlink" => nil }),
                   ConfigFile.new("~/.pgpass", ".pgpass", nil, { "write" => "*:*:*:*:\"\"" }),
+                  ConfigFile.new("~/.psqlrc", ".psqlrc", "~/config/jonesdeini/.psqlrc", { "symlink" => nil }),
                   ConfigFile.new("~/.vimrc", ".vimrc", "~/config/jonesdeini/.vimrc", { "symlink" => nil })]
 
   config_files.each do |file|
