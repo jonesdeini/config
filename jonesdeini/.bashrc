@@ -60,6 +60,7 @@ PATH=~/bin:$PATH
 # go
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/gocode
 
 #heroku
 export PATH=$PATH:$HOME/heroku-client/bin
