@@ -1,4 +1,5 @@
 --ignore-dir=coverage
+--ignore-dir=log
 --type-add=ruby=.haml
 --type-add=css=.less,.sass,.scss
 --type-add=js=.coffee,.mustache
