@@ -1,5 +1,3 @@
-" I USE SINGLE QUOTES ONLY WHEN I HAVE TO
-" AAAAAAAAARRRRRRRRRRGGGGGGGGGGGGGGGG!!!!!!!!!!
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
