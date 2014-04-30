@@ -6,9 +6,8 @@ call vundle#rc()
 " github repos
 Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
+Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'jonesdeini/vim-golang'
-" TODO fix this terrible thing
-"Bundle 'jonesdeini/vim-comment-blocks'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
@@ -25,29 +24,10 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
+
 " vim-script repos
 Bundle 'ack.vim'
 Bundle 'dbext.vim'
-
-" the search for a decent buffer explorer
-
-" not bad, just goes away sometimes
-Bundle 'buftabs'
-
-" loses formatting on buffer destroy
-" doesnt play well with dbext
-" qutting doesnt do anything
-" breaks command-t sometimes
-" Bundle 'minibufexpl.vim'
-
-" doesnt have a way to always show buffers
-" command t already will show current buffers
-" Bundle 'SelectBuf'
-" Bundle 'genutils'
-
-" runs in a window, so qa is needed
-" another thing I cant remember
-" Bundle 'Tagma-Buffer-Manager'
 
 filetype plugin indent on
 
@@ -98,6 +78,10 @@ set encoding=utf-8
 set laststatus=2
 set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
+
+" buffergator
+let g:buffergator_suppress_keymaps = 1
+nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
 
 " colors
 set t_Co=256
