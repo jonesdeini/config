@@ -5,6 +5,4 @@ alias ls='ls -lahFG'
 . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 
 # autojump
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
