@@ -1,6 +1,4 @@
 alias ls='ls -lahFG'
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-export EDITOR="/Applications/MacVim.App/Contents/MacOS/Vim"
 
 # git tab completion
 # not checking if it exists bc we want it to complain if it doesn't exist
