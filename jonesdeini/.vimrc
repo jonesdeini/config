@@ -1,35 +1,36 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " github repos
-Bundle 'ervandew/supertab'
-Bundle 'gmarik/vundle'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'jonesdeini/vim-golang'
-Bundle 'juvenn/mustache.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'shawncplus/skittles_berry'
-Bundle 'tpope/gem-ctags'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
+Plugin 'ervandew/supertab'
+Plugin 'gmarik/vundle'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'jonesdeini/vim-golang'
+Plugin 'juvenn/mustache.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'shawncplus/skittles_berry'
+Plugin 'tpope/gem-ctags'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
 
 " vim-script repos
-Bundle 'ack.vim'
-Bundle 'dbext.vim'
+Plugin 'ack.vim'
+Plugin 'dbext.vim'
 
+call vundle#end()
 filetype plugin indent on
 
 " formatting stuff
