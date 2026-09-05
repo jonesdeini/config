@@ -1,11 +1,13 @@
 [user]
-  name = jonesdeini
-  email = jonesdeini@gmail.com
+	email = jonesdeini@gmail.com
+	name = jonesdeini
+[core]
+	editor = vim
 [github]
-  user = jonesdeini
+	user = jonesdeini
 [color]
-  ui = auto
+	ui = auto
 [alias]
-  co = checkout
+	co = checkout
 [push]
-  default = simple
+	default = simple

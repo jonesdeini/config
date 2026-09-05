@@ -1,5 +1,5 @@
-# autojump
-. /etc/profile.d/autojump.bash
+# zoxide
+eval "$(zoxide init bash --cmd j)"
 
 # tab completion for git
 # arch only???
