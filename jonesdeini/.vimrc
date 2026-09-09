@@ -73,7 +73,6 @@ let g:gist_open_browser_after_post = 1
 " Vim-powerline
 set encoding=utf-8
 set laststatus=2
-set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 
 " buffergator
