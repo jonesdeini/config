@@ -1,36 +1,31 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
+call plug#begin('~/.vim/plugged')
 
 " github repos
-Plugin 'ervandew/supertab'
-Plugin 'gmarik/vundle'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'jonesdeini/vim-golang'
-Plugin 'juvenn/mustache.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'shawncplus/skittles_berry'
-Plugin 'tpope/gem-ctags'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
+Plug 'ervandew/supertab'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'jonesdeini/vim-golang'
+Plug 'juvenn/mustache.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'Lokaltog/vim-powerline'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'shawncplus/skittles_berry'
+Plug 'tpope/gem-ctags'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
 
-" vim-script repos
-Plugin 'ack.vim'
-Plugin 'dbext.vim'
-
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " formatting stuff
@@ -88,7 +83,7 @@ nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
 " colors
 set t_Co=256
 syntax enable
-colorscheme skittles_berry
+silent! colorscheme skittles_berry
 
 set noswapfile
 
@@ -119,10 +114,6 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
-
-" ; to  :
-" just dont have the accuracy for this right meow
-"noremap ; :
 
 " highlight search
 set hlsearch
