@@ -22,7 +22,6 @@ def main
     symlink file.dest_path, file.source_path
     puts "symlink #{file.filename}"
   end
-  Dir.mkdir(File.join(Dir.home,"bin")) unless Dir.exist?(File.join(Dir.home, "bin"))
 end
 
 main
