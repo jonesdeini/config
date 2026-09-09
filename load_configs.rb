@@ -8,7 +8,7 @@ end
 
 def write_config_to_file(dest_path, file_contents)
   # TODO check if file exists and prompt user to overwrite
-  unless File.exists? File.expand_path(dest_path)
+  unless File.exist? File.expand_path(dest_path)
     f = File.new(File.expand_path(dest_path), "w+")
     f << file_contents
     # TODO handle permissions
@@ -35,7 +35,7 @@ def main
     end
     puts "#{file.strategy.keys.first} #{file.filename}"
   end
-  Dir.mkdir(File.join(Dir.home,"bin")) unless Dir.exists?(File.join(Dir.home, "bin"))
+  Dir.mkdir(File.join(Dir.home,"bin")) unless Dir.exist?(File.join(Dir.home, "bin"))
 end
 
 main
