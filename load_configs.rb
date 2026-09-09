@@ -18,11 +18,9 @@ end
 
 def main
   # NOTE bash_profile is unlikely to change
-  config_files = [ConfigFile.new("~/.ackrc", ".ackrc", "~/config/jonesdeini/.ackrc", { "symlink" => nil }),
-                  ConfigFile.new("~/.bashrc", ".bashrc", "~/config/jonesdeini/.bashrc", { "symlink" => nil }),
+  config_files = [ConfigFile.new("~/.bashrc", ".bashrc", "~/config/jonesdeini/.bashrc", { "symlink" => nil }),
                   ConfigFile.new("~/.bash_profile", ".bash_profile", "~/config/jonesdeini/.bash_profile", { "symlink" => nil }),
                   ConfigFile.new("~/.gitconfig", ".gitconfig", "~/config/jonesdeini/.gitconfig", { "symlink" => nil }),
-                  ConfigFile.new("~/.irbrc", ".irbrc", "~/config/jonesdeini/.irbrc", { "symlink" => nil }),
                   ConfigFile.new("~/.pgpass", ".pgpass", nil, { "write" => "*:*:*:*:\"\"" }),
                   ConfigFile.new("~/.vimrc", ".vimrc", "~/config/jonesdeini/.vimrc", { "symlink" => nil })]
 
