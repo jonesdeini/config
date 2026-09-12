@@ -53,11 +53,11 @@ ex () {
 autoload -Uz compinit
 compinit
 
-# zoxide
-command -v zoxide > /dev/null && eval "$(zoxide init zsh --cmd j)"
-
 # mise (tool version manager)
 command -v mise > /dev/null && eval "$(mise activate zsh)"
+
+# zoxide
+command -v zoxide > /dev/null && eval "$(zoxide init zsh --cmd j)"
 
 # os specific configs
 case "$(uname -s)" in
