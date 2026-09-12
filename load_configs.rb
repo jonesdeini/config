@@ -15,6 +15,7 @@ def main
   config_files = [ConfigFile.new("~/.bashrc", ".bashrc", "~/config/jonesdeini/.bashrc"),
                   ConfigFile.new("~/.bash_profile", ".bash_profile", "~/config/jonesdeini/.bash_profile"),
                   ConfigFile.new("~/.zshrc", ".zshrc", "~/config/jonesdeini/.zshrc"),
+                  ConfigFile.new("~/.config/fish/config.fish", "config.fish", "~/config/jonesdeini/.config/fish/config.fish"),
                   ConfigFile.new("~/.gitconfig", ".gitconfig", "~/config/jonesdeini/.gitconfig"),
                   ConfigFile.new("~/.vimrc", ".vimrc", "~/config/jonesdeini/.vimrc"),
                   ConfigFile.new("~/.config/kitty/kitty.conf", "kitty.conf", "~/config/jonesdeini/.config/kitty/kitty.conf"),
