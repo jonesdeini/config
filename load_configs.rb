@@ -14,9 +14,11 @@ def main
   # NOTE bash_profile is unlikely to change
   config_files = [ConfigFile.new("~/.bashrc", ".bashrc", "~/config/jonesdeini/.bashrc"),
                   ConfigFile.new("~/.bash_profile", ".bash_profile", "~/config/jonesdeini/.bash_profile"),
+                  ConfigFile.new("~/.zshrc", ".zshrc", "~/config/jonesdeini/.zshrc"),
                   ConfigFile.new("~/.gitconfig", ".gitconfig", "~/config/jonesdeini/.gitconfig"),
                   ConfigFile.new("~/.vimrc", ".vimrc", "~/config/jonesdeini/.vimrc"),
-                  ConfigFile.new("~/.config/kitty/kitty.conf", "kitty.conf", "~/config/jonesdeini/.config/kitty/kitty.conf")]
+                  ConfigFile.new("~/.config/kitty/kitty.conf", "kitty.conf", "~/config/jonesdeini/.config/kitty/kitty.conf"),
+                  ConfigFile.new("~/.config/mise/config.toml", "mise/config.toml", "~/config/jonesdeini/.config/mise/config.toml")]
 
   config_files.each do |file|
     symlink file.dest_path, file.source_path

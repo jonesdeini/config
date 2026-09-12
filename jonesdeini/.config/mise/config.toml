@@ -1,0 +1,4 @@
+[tools]
+claude = "latest"
+github-cli = "latest"
+zoxide = "latest"
