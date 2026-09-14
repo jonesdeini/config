@@ -72,13 +72,8 @@ if status --is-interactive
         zoxide init fish --cmd j | source
     end
 
-    # os specific configs
-    switch (uname)
-        case Darwin
-            test -f ~/config/bashrc/osx.fish; and source ~/config/bashrc/osx.fish
-        case Linux
-            # nothing arch-specific needed for fish yet -- built-in
-            # completions cover git and zoxide/mise are handled above.
-            # Add ~/config/bashrc/arch.fish here if that changes.
-    end
+    # os specific configs: no dispatch needed here -- fish autoloads
+    # everything under conf.d/ on its own, and each file there guards
+    # itself by uname (see conf.d/osx.fish). Add conf.d/arch.fish the
+    # same way if Arch ever needs its own fish snippet.
 end
