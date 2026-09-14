@@ -2,8 +2,8 @@
 # ~/.config/fish/conf.d/osx.fish
 #
 # fish sources everything in conf.d/ automatically (interactive or not),
-# on every platform -- so unlike the switch(uname) dispatch in .zshrc,
-# this file guards itself instead of being conditionally sourced.
+# on every platform -- so this file guards itself with a uname check
+# instead of being conditionally sourced from config.fish.
 #
 
 if test (uname) = Darwin

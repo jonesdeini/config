@@ -11,11 +11,7 @@ rescue Errno::EEXIST
 end
 
 def main
-  # NOTE bash_profile is unlikely to change
-  config_files = [ConfigFile.new("~/.bashrc", ".bashrc", "~/config/jonesdeini/.bashrc"),
-                  ConfigFile.new("~/.bash_profile", ".bash_profile", "~/config/jonesdeini/.bash_profile"),
-                  ConfigFile.new("~/.zshrc", ".zshrc", "~/config/jonesdeini/.zshrc"),
-                  ConfigFile.new("~/.config/fish/config.fish", "config.fish", "~/config/jonesdeini/.config/fish/config.fish"),
+  config_files = [ConfigFile.new("~/.config/fish/config.fish", "config.fish", "~/config/jonesdeini/.config/fish/config.fish"),
                   ConfigFile.new("~/.config/fish/conf.d/osx.fish", "osx.fish", "~/config/jonesdeini/.config/fish/conf.d/osx.fish"),
                   ConfigFile.new("~/.gitconfig", ".gitconfig", "~/config/jonesdeini/.gitconfig"),
                   ConfigFile.new("~/.vimrc", ".vimrc", "~/config/jonesdeini/.vimrc"),

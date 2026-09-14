@@ -1,8 +1,0 @@
-# zoxide
-eval "$(zoxide init bash --cmd j)"
-
-# tab completion for git
-# arch only???
-if [ -f /usr/share/git/completion/git-completion.bash ]; then
-  . /usr/share/git/completion/git-completion.bash
-fi
