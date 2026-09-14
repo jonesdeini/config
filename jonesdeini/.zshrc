@@ -53,20 +53,21 @@ ex () {
 autoload -Uz compinit
 compinit
 
-# mise (tool version manager)
-command -v mise > /dev/null && eval "$(mise activate zsh)"
-
-# zoxide
-command -v zoxide > /dev/null && eval "$(zoxide init zsh --cmd j)"
-
-# os specific configs
+# os specific configs (before mise/zoxide below -- osx.zsh puts
+# ~/.local/bin on PATH, which the mise check needs to find it at all)
 case "$(uname -s)" in
   Darwin)
     [ -f ~/config/bashrc/osx.zsh ] && . ~/config/bashrc/osx.zsh
     ;;
   Linux)
     # nothing arch-specific needed for zsh yet -- compinit covers git
-    # completion and zoxide/mise are handled above. Add
+    # completion and zoxide/mise are handled below. Add
     # ~/config/bashrc/arch.zsh here if that changes.
     ;;
 esac
+
+# mise (tool version manager)
+command -v mise > /dev/null && eval "$(mise activate zsh)"
+
+# zoxide
+command -v zoxide > /dev/null && eval "$(zoxide init zsh --cmd j)"
