@@ -1,0 +1,3 @@
+# Repo-only files that aren't meant to be deployed into $HOME.
+/README.md
+/DroidSansMonoSlashed-Powerline.ttf

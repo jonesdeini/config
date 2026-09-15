@@ -1,4 +1,5 @@
 [tools]
+chezmoi = "latest"
 claude = "latest"
 github-cli = "latest"
 zoxide = "latest"
