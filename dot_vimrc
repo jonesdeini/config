@@ -10,7 +10,8 @@ Plug 'jonesdeini/vim-golang'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
-Plug 'Lokaltog/vim-powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'scrooloose/syntastic'
@@ -70,10 +71,12 @@ endif
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
-" Vim-powerline
+" Airline
 set encoding=utf-8
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 
 " buffergator
 let g:buffergator_suppress_keymaps = 1

@@ -1,0 +1,6 @@
+[roboto_mono_nerd_font]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/RobotoMono.zip"
+    include = ["*FontMono-Regular.ttf", "*FontMono-Bold.ttf", "*FontMono-Italic.ttf", "*FontMono-BoldItalic.ttf"]
+    targetPath = {{ if eq .chezmoi.os "darwin" }}"Library/Fonts"{{ else }}".local/share/fonts"{{ end }}
+    refreshPeriod = "720h"
