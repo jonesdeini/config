@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Re-runs whenever the plist's contents change, via this hash:
+# {{ include "Library/LaunchAgents/com.jonesdeini.syncthing.plist" | sha256sum }}
+
+PLIST="$HOME/Library/LaunchAgents/com.jonesdeini.syncthing.plist"
+
+launchctl unload "$PLIST" 2>/dev/null || true
+launchctl load -w "$PLIST"
+{{ else if eq .chezmoi.os "linux" -}}
+# Re-runs whenever the unit file's contents change, via this hash:
+# {{ include "dot_config/systemd/user/syncthing.service" | sha256sum }}
+
+systemctl --user daemon-reload
+systemctl --user enable --now syncthing.service
+{{ end -}}

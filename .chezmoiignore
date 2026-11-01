@@ -1,2 +1,9 @@
 # Repo-only files that aren't meant to be deployed into $HOME.
 README.md
+
+{{ if ne .chezmoi.os "darwin" }}
+Library/LaunchAgents/com.jonesdeini.syncthing.plist
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+.config/systemd/user/syncthing.service
+{{ end }}
