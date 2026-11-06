@@ -1,6 +1,7 @@
 [tools]
 chezmoi = "latest"
 claude = "latest"
+codex = "latest"
 github-cli = "latest"
 syncthing = "latest"
 zoxide = "latest"
